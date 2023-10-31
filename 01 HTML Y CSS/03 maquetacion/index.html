@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maquetación</title>
-  </head>
-  <body>
-    Bienvenidos al curso de html
-    <div>este es un div</div>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maquetación</title>
+        <!-- ⚡⚡ CSS -> CASCADE STYLE SHEET -->
+        <style>
+            body{
+                margin: 0;
+                width: 672px;
+            }
+            header {
+                font-size: 20px;
+                text-align: center;
+                border: 2px solid red;  
+            }
+            section {
+                /* border: 2px solid green; */
+                /* border: 2px solid rgb(0,255,0); */
+                border: 2px solid #2ecc71;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            article{
+                border: 2px solid #8e44ad;
+                text-align: center;
+                width: 330px; /* tenemos que aumentar los 2 px de cada lado de borde */
+                /* display: inline-block; */
+            }
+            aside{
+                border: 2px solid #f39c12;
+                text-align: center;
+                width: 330px;
+                /* display: inline-block; */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <header style="font-size: 60px; color: peru;"> -->
+        <header>
+            HEADER
+        </header>
+        <section>
+            <article>ARTICLE</article>
+            <aside>ASIDE</aside>
+        </section>
+    </body>
 </html>

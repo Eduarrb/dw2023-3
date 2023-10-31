@@ -1,0 +1,36 @@
+<mxfile host="app.diagrams.net" modified="2023-10-31T02:35:14.591Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="0PTlHkRY0QXt6lMMvUh3" version="22.0.8" type="device">
+  <diagram name="Página-1" id="IYRgh2pRDcrKskiXJOlh">
+    <mxGraphModel dx="1195" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WiByjsE3tVVhOIVSonFU-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF0000;strokeWidth=3;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="760" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-2" value="HEADER" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#0000CC;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="720" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-3" value="SECTION" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#006600;strokeWidth=3;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="110" width="720" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-4" value="ARTICLE&lt;br&gt;336px" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#663300;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-5" value="ASIDE&lt;br&gt;336px" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#663300;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WiByjsE3tVVhOIVSonFU-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-6" value="SECTION&lt;br&gt;672px" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="860" y="170" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WiByjsE3tVVhOIVSonFU-9" value="FOOTER" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF66B3;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="720" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
