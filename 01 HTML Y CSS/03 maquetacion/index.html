@@ -8,7 +8,7 @@
         <style>
             body{
                 margin: 0;
-                width: 672px;
+                /* width: 672px; */
             }
             header {
                 font-size: 20px;
@@ -25,14 +25,25 @@
             article{
                 border: 2px solid #8e44ad;
                 text-align: center;
-                width: 330px; /* tenemos que aumentar los 2 px de cada lado de borde */
+                /* width: 330px; */ /* tenemos que aumentar los 2 px de cada lado de borde */
                 /* display: inline-block; */
+                /* width: 50%; */
+                width: calc(50% - 4px);
+                height: 150px;
             }
             aside{
                 border: 2px solid #f39c12;
                 text-align: center;
-                width: 330px;
+                /* width: 330px; */
                 /* display: inline-block; */
+                /* width: 50%; */
+                width: calc(50% - 4px);
+                height: 150px;
+            }
+            footer{
+                text-align: center;
+                border: 2px solid lightslategray;
+                height: 50px;
             }
         </style>
     </head>
@@ -45,5 +56,8 @@
             <article>ARTICLE</article>
             <aside>ASIDE</aside>
         </section>
+        <footer>
+            FOOTER
+        </footer>
     </body>
 </html>
