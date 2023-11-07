@@ -1,8 +1,28 @@
+/* font-family: 'Open Sans', sans-serif; */
+/* font-family: 'Oswald', sans-serif; */
+
 body {
     margin: 0;
 }
+/* clases */
+.contenedor {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAV */
 nav {
     /* background-color: peru; */
+    /* border: 1px solid; */
+    /* margin: 0 0 0 0; */
+    /* background-color: blue; */
+    /* margin-top: 30px; */
+    /* margin-bottom: 30px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* padding: 20px 0 20px 0; */
+    /* padding: 20px 0; */
 }
 
 nav div {
@@ -10,9 +30,9 @@ nav div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    /* width: 60%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 
 nav div ul {
@@ -26,7 +46,7 @@ nav div ul {
 }
 
 nav div ul li{
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
 }
 
 nav div ul li a {
@@ -34,4 +54,64 @@ nav div ul li a {
     font-size: 22px;
     /* background-color: peru; */
     padding: 0 10px 0 10px;
+}
+
+/* HEADER */
+header {
+    background-image: url(../img/portada.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 150px 0;
+}
+/* DONT REPEAT YOURSELF */
+header div h1{
+    margin: 0;
+    color: #ff6818;
+    font-size: 88px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 98px;
+}
+
+header div p{
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgb(85, 92, 102);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+header div form{
+    display: flex;
+}
+
+header div form input {
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding: 12px 10px;
+}
+
+header div form button{
+    border: none;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background-color: #fe6415;
+    color: white;
+    padding: 12px 40px;
+    cursor: pointer;
+}
+
+/* SECTION */
+section {
+    padding: 50px 0;
+}
+
+section div {
+    display: flex;
+}
+
+section div article {
+    border: 3px solid;
 }
