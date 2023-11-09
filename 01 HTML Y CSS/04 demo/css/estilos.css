@@ -113,5 +113,80 @@ section div {
 }
 
 section div article {
-    border: 3px solid;
+    padding: 20px 35px 40px 35px;
+    color: white;
+}
+
+section div article h2,
+section div article h3{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+section div article h2{
+    font-size: 60px;
+}
+
+section div article h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+section div article p{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+}
+
+#article1{
+    background-color: #ff6818;
+}
+#article2{
+    background-color: #f43701;
+}
+#article3{
+    background-color: #292d31;
+}
+#article4{
+    background-color: #555c66;
+}
+
+section div article div{
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 35px;
+}
+
+#icono1{
+    color: #ff6818;
+}
+#icono2{
+    color: #f43701;
+}
+#icono3{
+    color: #292d31;
+}
+#icono4{
+    color: #555c66;
+}
+
+/* ⚡⚡ RESPONSIVE DESIGN ⚡⚡ */
+
+@media only screen and (max-width: 1400px){
+    .contenedor{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .contenedor{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }   
 }
