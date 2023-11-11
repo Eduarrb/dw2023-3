@@ -110,11 +110,14 @@ section {
 
 section div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 section div article {
+    width: 25%;
     padding: 20px 35px 40px 35px;
     color: white;
+    box-sizing: border-box;
 }
 
 section div article h2,
@@ -184,9 +187,54 @@ section div article div{
 
 @media only screen and (max-width: 1200px){
     .contenedor{
+        /* width: calc(100% - 40px); */
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
         box-sizing: border-box;
     }   
+}
+
+@media only screen and (max-width: 992px){
+    section div article {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    header div h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    header div h1,
+    header div p{
+        text-align: center;
+    }
+    header div h1 br,
+    header div p br{
+        content: "";
+    }
+    header div form {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    header div form input {
+        margin-bottom: 10px;
+    }
+
+    section div article {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav div img {
+        margin-bottom: 10px;
+    }
 }
