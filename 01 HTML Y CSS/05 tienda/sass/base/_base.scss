@@ -1,3 +1,5 @@
+$font-khula: 'Khula', sans-serif;
+
 * {
     padding: 0;
     margin: 0;
@@ -20,6 +22,7 @@ html {
          
     */
     font-size: 62.5%;
+    font-family: $font-khula;
 }
 
 a {

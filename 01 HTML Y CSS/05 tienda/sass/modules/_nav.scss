@@ -2,7 +2,32 @@
     &__welcome {
         background-color: #f4f4f4;
         &__container {
-
+            max-width: 120rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            padding: 1rem 0;
+            align-items: center;
+            &--msj{
+                color: rgb(51, 51, 51);
+            }
+            &__access{
+                &--account {
+                    color: rgb(102, 102, 102 );
+                    i {
+                        margin-right: .5rem;
+                    }
+                }
+                select {
+                    border: none;
+                    outline: 0;
+                    background-color: #f4f4f4;
+                    color: rgb(102, 102, 102 );
+                    margin-left: 1rem;
+                }
+            }
         }
     }
 }
