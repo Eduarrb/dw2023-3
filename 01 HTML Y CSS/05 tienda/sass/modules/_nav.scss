@@ -8,11 +8,11 @@
             padding: 1rem 0;
             align-items: center;
             &--msj{
-                color: rgb(51, 51, 51);
+                color: $color-secondary;
             }
             &__access{
                 &--account {
-                    color: rgb(102, 102, 102 );
+                    color: $color-secondary-ligth;
                     i {
                         margin-right: .5rem;
                     }
@@ -21,7 +21,7 @@
                     border: none;
                     outline: 0;
                     background-color: #f4f4f4;
-                    color: rgb(102, 102, 102 );
+                    color: $color-secondary-ligth;
                     margin-left: 1rem;
                 }
             }
@@ -40,13 +40,49 @@
                     &__item {
                         margin-left: 1rem;
                         &--link {
-                            color: rgb(51,51,51);
+                            color: $color-secondary;
                             font-size: 1.5rem;
                             text-transform: uppercase;
                             font-weight: 700;
                             // border: .1rem solid;
                             padding: 1.1rem 1.5rem .5rem 1.5rem;
                         }
+                    }
+                }
+                &__cart {
+                    background-color: $color-primary;
+                    color: white;
+                    padding: 1rem 3rem;
+                    text-align: center;
+                    &__box {
+                        position: relative;
+                        i {
+                            font-size: 2.5rem;
+                        }
+                        span {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            background-color: $color-secondary;
+                            font-size: 1.6rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            font-weight: 700;
+                            padding-top: .35rem;
+                            position: absolute;
+                            top: -.6rem;
+                            right: -1.2rem;
+                        }
+                    }
+                    &--title {
+                        margin-top: 1rem;
+                        margin-bottom: .5rem;
+                    }
+                    &--title,
+                    &--price {
+                        font-size: 1.6rem;
+                        font-weight: 700;
                     }
                 }
             }
