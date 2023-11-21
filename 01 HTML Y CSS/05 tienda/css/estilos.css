@@ -349,6 +349,46 @@ ul, ol {
   margin-right: auto;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.ml-4 {
+  margin-left: 4rem;
+}
+
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.ml-6 {
+  margin-left: 6rem;
+}
+
+.ml-7 {
+  margin-left: 7rem;
+}
+
+.ml-8 {
+  margin-left: 8rem;
+}
+
+.ml-9 {
+  margin-left: 9rem;
+}
+
+.ml-10 {
+  margin-left: 10rem;
+}
+
 .nav__welcome {
   background-color: #f4f4f4;
 }
@@ -431,6 +471,60 @@ ul, ol {
 .nav__menu__container__right__cart--title, .nav__menu__container__right__cart--price {
   font-size: 1.6rem;
   font-weight: 700;
+}
+.nav__search {
+  background-color: rgb(51, 51, 51);
+}
+.nav__search__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__search__container__category {
+  background-color: rgb(0, 132, 197);
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1.9rem 2rem;
+  font-weight: 600;
+}
+.nav__search__container__category span {
+  margin: 0 2rem 0 1rem;
+}
+.nav__search__container__formBox form {
+  display: flex;
+  font-size: 1.3rem;
+  background-color: white;
+  align-items: center;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.nav__search__container__formBox form input,
+.nav__search__container__formBox form select {
+  border: none;
+  outline: 0;
+  padding: 1.5rem 2rem 1rem 2rem;
+}
+.nav__search__container__formBox form input {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  width: 40rem;
+}
+.nav__search__container__formBox form select {
+  color: rgb(136, 136, 136);
+  appearance: none;
+}
+.nav__search__container__formBox form i {
+  color: rgb(136, 136, 136);
+}
+.nav__search__container__phone {
+  font-size: 1.6rem;
+}
+.nav__search__container__phone i {
+  color: rgb(0, 132, 197);
+}
+.nav__search__container__phone span {
+  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */
