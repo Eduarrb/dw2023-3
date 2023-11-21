@@ -1,0 +1,13 @@
+.cards {
+    &__container {
+        display: flex;
+        column-gap: 3rem;
+        flex-wrap: wrap;
+        &__item {
+            background-color: peru;
+            border: 1px solid;
+            height: 10rem;
+            width: calc(25% - 9rem / 4);
+        }
+    }
+}

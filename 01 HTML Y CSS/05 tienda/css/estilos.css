@@ -527,4 +527,81 @@ ul, ol {
   color: white;
 }
 
+.portada__top {
+  position: relative;
+}
+.portada__top--img {
+  width: 100%;
+  display: block;
+}
+.portada__top__container {
+  position: absolute;
+  top: 50%;
+  width: 120rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.portada__top__container__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.portada__top__container__box--t1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.portada__top__container__box--t2 {
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.portada__top__container__box--t3 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.portada__top__container__box--t4 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.portada__top__container__box--btn {
+  color: rgb(51, 51, 51);
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.portada__top__container__box--btn:hover {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  transition: all 0.3s;
+}
+.portada__bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portada__bottom img {
+  display: block;
+  width: 25%;
+}
+
+.cards__container {
+  display: flex;
+  column-gap: 3rem;
+  flex-wrap: wrap;
+}
+.cards__container__item {
+  background-color: peru;
+  border: 1px solid;
+  height: 10rem;
+  width: calc(25% - 2.25rem);
+}
+
 /*# sourceMappingURL=estilos.css.map */
