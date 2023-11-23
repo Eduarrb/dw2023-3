@@ -1,5 +1,19 @@
 $font-khula: 'Khula', sans-serif;
 
+/*
+    EM
+    992px / 16px = 62em
+    768px / 16px = 48em
+    576px / 16px = 36em
+    420px
+    380px
+
+*/
+
+$bp-large: 62em;
+$bp-medium: 48em;
+$bp-small: 36em;
+
 * {
     padding: 0;
     margin: 0;
