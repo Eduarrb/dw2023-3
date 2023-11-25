@@ -7,6 +7,20 @@ $color-secondary-ligth: rgb(102, 102, 102);
     margin-left: auto;
     margin-right: auto;
     // background-color: peru;
+    @media only screen and (max-width: $bp-extraLarge){
+        max-width: 96rem;
+    }
+    @media only screen and (max-width: $bp-large){
+        max-width: 72rem;
+    }
+    @media only screen and (max-width: $bp-medium){
+        max-width: 54rem;
+    }
+    @media only screen and (max-width: $bp-small){
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
 }
 
 .ml-1 {

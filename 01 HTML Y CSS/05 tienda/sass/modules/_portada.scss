@@ -1,19 +1,35 @@
 .portada {
     &__top {
         position: relative;
+        @media only screen and (max-width: $bp-large){
+            background-image: url(../img/portada1.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
         &--img {
             width: 100%;
             display: block;
+            @media only screen and (max-width: $bp-large){
+                display: none;
+            }
         }
         &__container {
             position: absolute;
             top: 50%;
             width: 120rem;
             left: 50%;
-            // transform: translateY(-50%);
-            // transform: translateX(-50%);
             transform: translate(-50%, -50%);
             display: flex;
+            @media only screen and (max-width: $bp-extraLarge){
+                width: auto;
+            }
+            @media only screen and (max-width: $bp-large){
+                position: static;
+                transform: none;
+                padding: 5rem 0;
+            }
             &__box {
                 // background-color: peru;
                 display: flex;
@@ -32,16 +48,25 @@
                     text-transform: uppercase;
                     font-weight: 700;
                     margin-top: 2rem;
+                    @media only screen and (max-width: $bp-large){
+                        font-size: 5rem;
+                    }
                 }
                 &--t3 {
                     font-size: 5rem;
                     text-transform: uppercase;
                     font-weight: 700;
+                    @media only screen and (max-width: $bp-large){
+                        font-size: 2rem;
+                    }
                 }
                 &--t4 {
                     font-size: 2.5rem;
                     margin-top: 1rem;
                     margin-bottom: 2rem;
+                    @media only screen and (max-width: $bp-large){
+                        font-size: 1.8rem;
+                    }
                 }
                 &--btn {
                     color: $color-secondary;
@@ -55,8 +80,6 @@
                         background-color: $color-secondary;
                         color: white;
                         transition: all .3s;
-                        // transform: translateX(1rem);
-                        // transform: scale(1.1);
                     }
                 }
             }
@@ -68,6 +91,12 @@
         img {
             display: block;
             width: 25%;
+            @media only screen and (max-width: $bp-large){
+                width: 50%;
+            }
+            @media only screen and (max-width: $bp-small){
+                width: 100%;
+            }
         }
     }
 }
