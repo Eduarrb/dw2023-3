@@ -18,6 +18,7 @@ popupCaja.addEventListener('click', e => {
 });
 
 window.addEventListener('keyup', e => {
+    console.log(e)
     if(e.code === "Escape"){
         popupCaja.classList.remove('mostrarCaja');
     }
