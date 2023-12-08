@@ -49,5 +49,20 @@ form.addEventListener('submit', function(e){
             scrollTo(0, posicionY);
             console.log(posicionY);
         }
-    }, 10)
+    }, 10);
+
+    let puntajeSpan = resultado.querySelector('span');
+    puntajeSpan.textContent = `${0}%`;
+    resultado.classList.remove('d-none');
+
+    let sumaPuntajeTotal = 0;
+    let animacionPuntaje = setInterval(function(){
+        if(sumaPuntajeTotal === puntaje){
+            clearInterval(animacionPuntaje);
+        } else {
+            sumaPuntajeTotal += 5;
+        }
+
+        puntajeSpan.textContent = `${sumaPuntajeTotal}%`;
+    }, 50)
 });
