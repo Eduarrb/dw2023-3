@@ -1,0 +1,13 @@
+{
+    "persona1": {
+        "nombre": "Juan",
+        "apellido": "Torres"
+    },
+    "persona2": {
+        "nombre": "Lucia",
+        "pellidos": "Aliaga",
+        "estadoCivil": "Soltera",
+        "hijos": [true, "Dilan", "Karina"],
+        "fechaNac": 1989
+    }
+}
