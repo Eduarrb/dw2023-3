@@ -65,3 +65,78 @@ CREATE TABLE peliculas (
 
 INSERT INTO peliculas (peli_nombre, peli_genero, peli_fechaEstreno, peli_restricciones) VALUES
     ('Openhaimer', 'drama', '2023-07-21', 'PG-13')
+
+INSERT INTO peliculas (peli_nombre, peli_genero, peli_fechaEstreno, peli_restricciones) VALUES
+    ('Matrix', 'Ciencia Ficción', '1999-12-24', 'PG-13'),
+    ('Titanic', 'Aventura', '1998-01-23', 'PG-16'),
+    ('Interstellar', 'ciencia ficcion', '2014-11-06', 'PG'),
+    ('Rocky', 'Drama', '1985-08-08', 'PG'),
+    ('La lista de Shindler', 'Drama', '1993-12-12', 'PG-16'),
+    ('El Resplandor', 'Suspenso', '1980-05-05', 'PG-13'),
+    ('Alien El Octavo Pasajero', 'Terror - Ciencia Ficcion', '1980-01-24', 'PG-16')
+
+INSERT INTO peliculas (peli_nombre, peli_genero, peli_fechaEstreno, peli_restricciones) VALUES
+    ('El señor de los anillos: La comunidad del anillo', 'Ciencia ficción', '2004-11-11', 'PG')
+
+-- 1️⃣ WHERE
+SELECT * FROM peliculas WHERE peli_id = 6
+SELECT * FROM peliculas WHERE peli_nombre = 'interstellar'
+SELECT * FROM peliculas WHERE peli_restricciones = 'pg'
+SELECT * FROM peliculas WHERE peli_nombre = 'el'
+SELECT * FROM peliculas WHERE peli_genero = 'Ciencia Ficción'
+
+-- 2️⃣ ORDER BY
+SELECT * FROM peliculas ORDER BY peli_id DESC
+SELECT * FROM peliculas ORDER BY peli_nombre
+SELECT * FROM peliculas ORDER BY peli_fechaEstreno
+
+SELECT * FROM peliculas WHERE peli_genero = 'ciencia ficcion' ORDER BY peli_nombre DESC
+
+INSERT INTO peliculas (peli_nombre, peli_genero, peli_fechaEstreno, peli_restricciones) VALUES
+    ('007: Golden Eye', 'Acción', '1995-12-24', 'PG-13')
+
+SELECT * FROM peliculas ORDER BY peli_id DESC
+
+CREATE TABLE actores (
+    act_id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    act_nombres VARCHAR(100) NOT NULL,
+    act_apellidos VARCHAR(100) NOT NULL
+)
+
+INSERT INTO actores (act_nombres, act_apellidos) VALUES
+    ('Kilian', 'Murphy'),
+    ('Matt', 'Daemon'),
+    ('Keanu', 'Reeves'),
+    ('Carrie-Anne', 'Moss'),
+    ('Leonardo', 'Dicaprio'),
+    ('Kate', 'Winslet'),
+    ('Silvester', 'Stallone'),
+    ('Talia', 'Shire'),
+    ('Jack', 'Nicolson'),
+    ('Shelly', 'Duvall'),
+    ('Ian', 'Mackellen'),
+    ('Elijah', 'Wood')
+
+-- 3️⃣ CONCAT
+SELECT act_nombres, act_apellidos FROM actores
+SELECT CONCAT(act_nombres, act_apellidos) FROM actores
+SELECT CONCAT(act_nombres, " ", act_apellidos) FROM actores
+
+-- 4️⃣ ALIAS DE CAMPOS
+SELECT CONCAT(act_nombres, " ", act_apellidos) AS actor FROM actores
+SELECT CONCAT(act_nombres, " ", act_apellidos) AS actor_de_reparto FROM actores
+SELECT CONCAT(act_nombres, " ", act_apellidos) AS "actor de reparto" FROM actores
+
+-- 5️⃣ OBTENER CARACTERES POR SEPARDO - SUBSTRING
+SELECT SUBSTRING(act_nombres, 1, 5) FROM actores
+
+-- EJERCICIO: kmurphy@continental.edu.pe
+SELECT SUBSTRING(act_nombres, 1, 1) FROM actores
+SELECT CONCAT(SUBSTRING(act_nombres, 1, 1), act_apellidos, "@peliculas.com") AS correo FROM actores
+SELECT LOWER(CONCAT(SUBSTRING(act_nombres, 1, 1), act_apellidos, "@peliculas.com")) AS correo FROM ACTORES
+SELECT UPPER(CONCAT(SUBSTRING(act_nombres, 1, 1), act_apellidos, "@peliculas.com")) AS correo FROM ACTORES
+
+-- 6️⃣ COMODINES
+SELECT * FROM peliculas WHERE peli_nombre LIKE 'el%'
+SELECT * FROM peliculas WHERE peli_nombre LIKE '%r'
+SELECT * FROM peliculas WHERE peli_nombre LIKE '%r%'
