@@ -48,23 +48,13 @@
 
         <div class="row">
             <?php
-                $query = "SELECT a.peli_img, a.peli_nombre, CONCAT(b.dire_nombres, ' ', b.dire_apellidos) AS director, a.peli_restricciones FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id";
+                $query = "SELECT a.peli_id, a.peli_img, a.peli_nombre, CONCAT(b.dire_nombres, ' ', b.dire_apellidos) AS director, a.peli_restricciones FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id";
                 $query_res = mysqli_query($conexion, $query);
-                // print_r($query_res);
 
                 // ⚡⚡ ARRAYS ASOCIATIVOS ⚡⚡
                 $array2 = ['Joshi', true, 12];
-                // key - value pair
                 $arrayAso = ["peli_nombre" => "Openhimer", "director" => "Christopher Nolan", "rt" => "PG-13"];
-                // print_r($arrayAso);
-                // echo $arrayAso["peli_nombre"];
-                // $resBuffer = mysqli_fetch_array($query_res);
-                // $resBuffer = mysqli_fetch_assoc($query_res);
-                // print_r($resBuffer);
-                // echo $resBuffer["director"];
                 while($fila = mysqli_fetch_assoc($query_res)){
-                    // print_r($fila);
-                    // echo "<br>";
                     ?>
                         <div class="col-md-3 item mb-3">
                             <img src="<?php echo $fila['peli_img']; ?>" alt="<?php echo $fila['peli_nombre']; ?>" width="100%">
@@ -78,8 +68,8 @@
                                 <strong>Rating: </strong> <?php echo $fila['peli_restricciones']; ?>
                             </div>
                             <div>
-                                <a href="#" class="btn btn-success">editar</a>
-                                <a href="#" class="btn btn-danger">borrar</a>
+                                <a href="edit.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-success">editar</a>
+                                <a href="delete.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-danger">borrar</a>
                             </div>
                         </div>
                 <?php }
