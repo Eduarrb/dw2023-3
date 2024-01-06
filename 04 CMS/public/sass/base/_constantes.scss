@@ -1,0 +1,55 @@
+$color-primary: rgb(0, 132, 197);
+$color-secondary: rgb(51, 51, 51);
+$color-secondary-ligth: rgb(102, 102, 102);
+
+.container {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+    // background-color: peru;
+    @media only screen and (max-width: $bp-extraLarge){
+        max-width: 96rem;
+    }
+    @media only screen and (max-width: $bp-large){
+        max-width: 72rem;
+    }
+    @media only screen and (max-width: $bp-medium){
+        max-width: 54rem;
+    }
+    @media only screen and (max-width: $bp-small){
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.ml-3 {
+    margin-left: 3rem;
+}
+.ml-4 {
+    margin-left: 4rem;
+}
+.ml-5 {
+    margin-left: 5rem;
+}
+.ml-6 {
+    margin-left: 6rem;
+}
+.ml-7 {
+    margin-left: 7rem;
+}
+.ml-8 {
+    margin-left: 8rem;
+}
+.ml-9 {
+    margin-left: 9rem;
+}
+.ml-10 {
+    margin-left: 10rem;
+}

@@ -1,0 +1,39 @@
+.cards {
+    padding: 5rem 0;
+    &__container {
+        display: flex;
+        column-gap: 3rem;
+        row-gap: 3rem;
+        flex-wrap: wrap;
+        &__item {
+            background-color: rgb(244, 244, 244);
+            border: 2px solid #e5e5e5;
+            width: calc(25% - 9rem / 4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0;
+            @media only screen and (max-width: $bp-large){
+                width: calc(50% - 1.5rem);
+            }
+            @media only screen and (max-width: $bp-small){
+                width: 100%;
+            }
+            i {
+                color: $color-primary;
+                font-size: 3rem;
+            }
+            &--titulo{
+                font-size: 2rem;
+                font-weight: 700;
+                color: $color-secondary;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+            &--descri{
+                font-size: 1.4rem;
+                color: $color-secondary;
+            }
+        }
+    }
+}

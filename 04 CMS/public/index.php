@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Tienda</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__welcome">
+            <div class="nav__welcome__container container">
+                <div class="nav__welcome__container--msj">
+                    Mensaje de saludo
+                </div>
+                <div class="nav__welcome__container__access">
+                    <a href="#" class="nav__welcome__container__access--account">
+                        <i class="fa-solid fa-user"></i> Mi Cuenta
+                    </a>
+                    <select class="nav__welcome__container__access--moneda">
+                        <option value="USD">USD $</option>
+                        <option value="PEN">PEN S/</option>
+                    </select>
+                    <select class="nav__welcome__container__access--idioma">
+                        <option value="us">     
+                            English
+                        </option>
+                        <option value="es">
+                            Español
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="nav__menu">
+            <div class="nav__menu__container container">
+                <img src="img/logo2.png" alt="logo" class="nav__menu__container--logo">
+                <a href="#" class="nav__menu__container--iconMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <div class="nav__menu__container__right">
+                    <ul class="nav__menu__container__right__box">
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">home</a>
+                        </li>
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">shop</a>
+                        </li>
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">blog</a>
+                        </li>
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">pages</a>
+                        </li>
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">contact</a>
+                        </li>
+                        <li class="nav__menu__container__right__box__item">
+                            <a href="#" class="nav__menu__container__right__box__item--link">about us</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="nav__menu__container__right__cart">
+                        <div class="nav__menu__container__right__cart__box">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>2</span>
+                        </div>
+                        <div class="nav__menu__container__right__cart--title">My Cart</div>
+                        <div class="nav__menu__container__right__cart--price">S/59.23</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav__search">
+            <div class="nav__search__container container">
+                <div class="nav__search__container__category">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                    <span>shop by categories</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="nav__search__container__formBox">
+                    <form>
+                        <input type="text" placeholder="Ingresa palabra clave...">
+                        <select name="" id="">
+                            <option value="">All Categories</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down ml-1"></i>
+                        <i class="fa-solid fa-magnifying-glass ml-6"></i>
+                    </form>
+                </div>
+                <div class="nav__search__container__phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>(080) 123 4567 890</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="portada">
+        <div class="portada__top">
+            <img src="img/portada1.jpg" alt="" class="portada__top--img">
+            <div class="portada__top__container">
+                <div class="portada__top__container__box">
+                    <p class="portada__top__container__box--t1">
+                        premium ecommerce html template
+                    </p>
+                    <p class="portada__top__container__box--t2">
+                        hurry up!
+                    </p>
+                    <p class="portada__top__container__box--t3">
+                        2023 xail gear vr
+                    </p>
+                    <p class="portada__top__container__box--t4">
+                        Starting At $19.00
+                    </p>
+                    <a href="/compras.html" class="portada__top__container__box--btn">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="portada__bottom">
+            <img src="img/p1.jpg" alt="">
+            <img src="img/p2.jpg" alt="">
+            <img src="img/p3.jpg" alt="">
+            <img src="img/p4.jpg" alt="">
+        </div>
+    </section>
+    <section class="cards">
+        <div class="cards__container container">
+            <div class="cards__container__item">
+                <i class="fa-solid fa-truck"></i>
+                <span class="cards__container__item--titulo">
+                    Free Shipping
+                </span>
+                <span class="cards__container__item--descri">
+                    Free shipping on all UK orders
+                </span>
+            </div>
+            <div class="cards__container__item">
+                <i class="fa-solid fa-credit-card"></i>
+                <span class="cards__container__item--titulo">
+                    Free Shipping
+                </span>
+                <span class="cards__container__item--descri">
+                    Free shipping on all UK orders
+                </span>
+            </div>
+            <div class="cards__container__item">
+                <i class="fa-solid fa-calendar"></i>
+                <span class="cards__container__item--titulo">
+                    Free Shipping
+                </span>
+                <span class="cards__container__item--descri">
+                    Free shipping on all UK orders
+                </span>
+            </div>
+            <div class="cards__container__item">
+                <i class="fa-solid fa-asterisk"></i>
+                <span class="cards__container__item--titulo">
+                    Free Shipping
+                </span>
+                <span class="cards__container__item--descri">
+                    Free shipping on all UK orders
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="productos">
+        <div class="productos__container container">
+            <div class="productos__container__categorias">
+                <a href="#" class="productos__container__categorias--link active">
+                    new arrival
+                </a>
+                <a href="#" class="productos__container__categorias--link ml-5">bestseller</a>
+                <a href="#" class="productos__container__categorias--link ml-5">featured products</a>
+            </div>
+            <div class="productos__container__box">
+                <div class="productos__container__box__item">
+                    <div class="productos__container__box__item__top">
+                        <span>New</span>
+                        <span>-10%</span>
+                    </div>
+                    <img src="img/mando.jpg" alt="mando">
+                    <h2>Mando Xbox Gold</h2>
+                    <div class="productos__container__box__item__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="productos__container__box__item__precio">
+                        <span class="productos__container__box__item__precio--real">$23.90</span>
+                        <span class="productos__container__box__item__precio--oferta">$21.50</span>
+                    </div>
+                    <a href="#" class="productos__container__box__item--btn">add to cart</a>
+                </div>
+                <div class="productos__container__box__item">
+                    <div class="productos__container__box__item__top">
+                        <span>New</span>
+                        <span>-10%</span>
+                    </div>
+                    <img src="img/mando.jpg" alt="mando">
+                    <h2>Mando Xbox Gold</h2>
+                    <div class="productos__container__box__item__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="productos__container__box__item__precio">
+                        <span class="productos__container__box__item__precio--real">$23.90</span>
+                        <span class="productos__container__box__item__precio--oferta">$21.50</span>
+                    </div>
+                    <a href="#" class="productos__container__box__item--btn">add to cart</a>
+                </div>
+                <div class="productos__container__box__item">
+                    <div class="productos__container__box__item__top">
+                        <span>New</span>
+                        <span>-10%</span>
+                    </div>
+                    <img src="img/mando.jpg" alt="mando">
+                    <h2>Mando Xbox Gold</h2>
+                    <div class="productos__container__box__item__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="productos__container__box__item__precio">
+                        <span class="productos__container__box__item__precio--real">$23.90</span>
+                        <span class="productos__container__box__item__precio--oferta">$21.50</span>
+                    </div>
+                    <a href="#" class="productos__container__box__item--btn">add to cart</a>
+                </div>
+                <div class="productos__container__box__item">
+                    <div class="productos__container__box__item__top">
+                        <span>New</span>
+                        <span>-10%</span>
+                    </div>
+                    <img src="img/mando.jpg" alt="mando">
+                    <h2>Mando Xbox Gold</h2>
+                    <div class="productos__container__box__item__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="productos__container__box__item__precio">
+                        <span class="productos__container__box__item__precio--real">$23.90</span>
+                        <span class="productos__container__box__item__precio--oferta">$21.50</span>
+                    </div>
+                    <a href="#" class="productos__container__box__item--btn">add to cart</a>
+                </div>
+                <div class="productos__container__box__item">
+                    <div class="productos__container__box__item__top">
+                        <span>New</span>
+                        <span>-10%</span>
+                    </div>
+                    <img src="img/mando.jpg" alt="mando">
+                    <h2>Mando Xbox Gold</h2>
+                    <div class="productos__container__box__item__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="productos__container__box__item__precio">
+                        <span class="productos__container__box__item__precio--real">$23.90</span>
+                        <span class="productos__container__box__item__precio--oferta">$21.50</span>
+                    </div>
+                    <a href="#" class="productos__container__box__item--btn">add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>
