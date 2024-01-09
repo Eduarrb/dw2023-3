@@ -16,6 +16,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">¡Crear Cuenta!</h1>
                             </div>
+                            <?php mostrar_msj(); ?>
                             <?php validar_user_reg(); ?>
                             <form class="user" method="post">
                                 <div class="form-group row">

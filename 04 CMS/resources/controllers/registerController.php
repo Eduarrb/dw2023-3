@@ -36,17 +36,21 @@
                 }
             } else {
                 if(registro_usuario($user_nombres, $user_apellidos, $user_email, $user_pass)){
-                    echo display_msj("Registro satisfactorio, Por favor revisa tu bandeja o spam para la activación de tu cuenta. Esto puede tardar unos minutos", "success");
+                    // echo display_msj("Registro satisfactorio, Por favor revisa tu bandeja o spam para la activación de tu cuenta. Esto puede tardar unos minutos", "success");
+                    set_mensaje(display_msj("Registro satisfactorio, Por favor revisa tu bandeja o spam para la activación de tu cuenta. Esto puede tardar unos minutos", "success"));
+                    redirect("register.php");
                 } else {
-                    echo display_msj("Lo sentimos, no pudimos registrar tu cuenta, intentalo más tarde", "danger");
+                    set_mensaje(display_msj("Lo sentimos, no pudimos registrar tu cuenta, intentalo más tarde", "danger"));
+                    redirect("register.php");
                 }
             }
-
         }
     }
 
     function registro_usuario($nombres, $apellidos, $email, $pass){
-        return false;
+        $user_token = md5($user_email);
+        $user_pass = password_hash($pass, PASSWORD_BCRYPT, array('cost' => 12));
+        query("INSERT INTO usuarios (user_nombres, user_apellidos, user_email, user_pass, user_token) VALUES ('{$nombres}', '{$apellidos}', '{$email}', '{$user_pass}', '{$user_token}')");
+        return true;
     }
-
 ?>

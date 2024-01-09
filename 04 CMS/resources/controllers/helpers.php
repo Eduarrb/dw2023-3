@@ -28,4 +28,23 @@ DELIMITADOR;
         }
         return false;
     }
+
+    function redirect($location){
+        header("Location: {$location}");
+    }
+
+    function set_mensaje($msj){
+        if(!empty($msj)){
+            $_SESSION['mensaje'] = $msj;
+        } else {
+            $msj = '';
+        }
+    }
+
+    function mostrar_msj(){
+        if(isset($_SESSION['mensaje'])){
+            echo $_SESSION['mensaje'];
+            unset($_SESSION['mensaje']);
+        }
+    }
 ?>
