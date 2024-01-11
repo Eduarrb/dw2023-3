@@ -21,6 +21,10 @@ DELIMITADOR;
         return mysqli_query($conexion, $consulta);
     }
 
+    function fetch_assoc($query){
+        return mysqli_fetch_assoc($query);
+    }
+
     function email_existe($email){
         $query = query("SELECT * FROM usuarios WHERE user_email = '{$email}'");
         if(mysqli_num_rows($query) >= 1){

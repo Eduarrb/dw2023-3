@@ -4,5 +4,3 @@
     send_email('eduardo@gmail.com', 'prueba', 'mensaje');
     
 ?>
-
-<!--  -->
