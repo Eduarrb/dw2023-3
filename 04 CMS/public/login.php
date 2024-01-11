@@ -35,14 +35,14 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="user_recuerdame">
                                                 <label class="custom-control-label" for="customCheck">Recuerdame por 60 días</label>
                                             </div>
                                         </div>
                                         <!-- <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a> -->
-                                        <input type="submit" value="Iniciar Sesión" class="btn btn-primary btn-user btn-block">
+                                        <input type="submit" value="Iniciar Sesión" class="btn btn-primary btn-user btn-block" name="login">
                                     </form>
                                     <hr>
                                     <div class="text-center">

@@ -33,6 +33,10 @@ DELIMITADOR;
         return false;
     }
 
+    function contar_filas($query){
+        return mysqli_num_rows($query);
+    }
+
     function redirect($location){
         header("Location: {$location}");
     }
