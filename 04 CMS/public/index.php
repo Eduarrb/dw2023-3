@@ -130,7 +130,6 @@
             <img src="img/p4.jpg" alt="">
         </div>
     </section>
-    <?php echo $_SESSION['user_rol']; ?>
     <section class="cards">
         <div class="cards__container container">
             <div class="cards__container__item">
