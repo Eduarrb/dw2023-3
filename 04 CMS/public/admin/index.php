@@ -23,6 +23,9 @@
                     if(isset($_GET['productos'])){
                         include(VIEW_BACK . DS . "productos.php");
                     }
+                    if(isset($_GET['productos_add'])){
+                        include(VIEW_BACK . DS . "productos_add.php");
+                    }
                 ?>
                   
                 </div>
