@@ -9,6 +9,7 @@
                 <a href="index.php?productos_add" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar Producto</a>
             </div>
         </div>
+        <?php mostrar_msj(); ?>
         <div class="card shadow">
             <div class="card-header">
                 <h6 class="text-primary">Lista de productos</h6>
@@ -25,7 +26,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php get_productos(); ?>
+                        <!-- <tr>
                             <td>Mando Xbox</td>
                             <td><img src="../img/mando.jpg" alt="Mando" width="100px"></td>
                             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea est magnam at provident architecto dignissimos quas nobis, recusandae libero illo enim aliquam odio et.</td>
@@ -37,7 +39,7 @@
                             <td>
                                 <a href="#" class="btn btn-small btn-danger">borrar</a>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

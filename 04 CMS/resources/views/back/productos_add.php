@@ -9,7 +9,7 @@
                     mostrar_msj(); 
                     $errores = post_productosAgregar();
                 ?>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="prod_nombre">Nombre:</label>
                         <input type="text" id="prod_nombre" class="form-control" name="prod_nombre">
@@ -27,10 +27,16 @@
                     <div class="form-group">
                         <label for="prod_precio">Precio:</label>
                         <input type="number" id="prod_precio" class="form-control" name="prod_precio" step="any">
+                        <div class="text-danger">
+                            <?php echo !empty($errores['precio']) ? $errores['precio'] : ""; ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prod_canti">Cantidad:</label>
                         <input type="number" id="prod_canti" class="form-control" name="prod_canti">
+                        <div class="text-danger">
+                            <?php echo !empty($errores['canti']) ? $errores['canti'] : ""; ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prod_img">Imagen:</label>
