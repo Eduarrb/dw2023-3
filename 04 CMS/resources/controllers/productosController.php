@@ -49,7 +49,7 @@
                         <a href="index.php?productos_edit&id={$fila['prod_id']}" class="btn btn-small btn-warning">editar</a>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-small btn-danger">borrar</a>
+                        <a href="javascript:void(0)" class="btn btn-small btn-danger delete_link" rel="{$fila['prod_id']}" titulo="Eliminar Producto" tabla="productos" accion="delete">borrar</a>
                     </td>
                 </tr>
 DELIMITADOR;
@@ -85,14 +85,21 @@ DELIMITADOR;
                 move_uploaded_file($prod_img_temp, "../img/{$prod_img_nueva}");
                 $imagenAnteriorLocation = "../img/{$imgAnterior}";
                 unlink($imagenAnteriorLocation);
-                // echo $prod_img_nueva;
             } else {
                 $prod_img_nueva = $imgAnterior;
-                // echo $prod_img_nueva;
             }
 
             query("UPDATE productos SET prod_nombre = '{$prod_nombre}', prod_descri = '{$prod_descri}', prod_precio = {$prod_precio}, prod_canti = {$prod_canti}, prod_img = '{$prod_img_nueva}' WHERE prod_id = {$id}");
             set_mensaje(display_msj("Producto actualizado correctamente", "success"));
+            redirect("index.php?productos");
+        }
+    }
+
+    function post_productoDelete(){
+        if(isset($_GET['delete'])){
+            $id = limpiar_string(trim($_GET['delete']));
+            query("DELETE FROM productos WHERE prod_id = {$id}");
+            set_mensaje(display_msj("Producto eliminado correctamente!", "success"));
             redirect("index.php?productos");
         }
     }

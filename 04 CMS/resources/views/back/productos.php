@@ -27,21 +27,9 @@
                     </thead>
                     <tbody>
                         <?php get_productos(); ?>
-                        <!-- <tr>
-                            <td>Mando Xbox</td>
-                            <td><img src="../img/mando.jpg" alt="Mando" width="100px"></td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea est magnam at provident architecto dignissimos quas nobis, recusandae libero illo enim aliquam odio et.</td>
-                            <td>280.90</td>
-                            <td>120</td>
-                            <td>
-                                <a href="#" class="btn btn-small btn-warning">editar</a>
-                            </td>
-                            <td>
-                                <a href="#" class="btn btn-small btn-danger">borrar</a>
-                            </td>
-                        </tr> -->
                     </tbody>
                 </table>
+                <?php post_productoDelete(); ?>
             </div>
         </div>
     </div>
