@@ -385,6 +385,25 @@ ul, ol {
   }
 }
 
+.btn {
+  font-size: 1.8rem;
+  color: white;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn-warning {
+  background-color: #f1c40f;
+}
+
+.btn-success {
+  background-color: #1abc9c;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+}
+
 .text-right {
   text-align: right;
 }
@@ -1095,6 +1114,39 @@ ul, ol {
 .comentarios__container__box__item__data__stars {
   color: #f1c40f;
   font-size: 1.4rem;
+}
+
+.cart {
+  padding-top: 19.738rem;
+}
+.cart__container {
+  padding: 5rem 0;
+}
+.cart__container__table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.cart__container__table thead th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 1.6rem;
+  border-spacing: 0;
+  padding: 1rem 0;
+}
+.cart__container__table tbody tr {
+  transition: all 0.3s;
+}
+.cart__container__table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.cart__container__table tbody tr td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.6rem;
+  text-align: center;
+}
+.cart__container__table tbody tr td img {
+  width: 10rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

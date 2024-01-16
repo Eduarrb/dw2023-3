@@ -22,7 +22,21 @@ $color-secondary-ligth: rgb(102, 102, 102);
     }
     
 }
-
+.btn {
+    font-size: 1.8rem;
+    color: white;
+    padding: 1.2rem 1.2rem .8rem 1.2rem;
+    border-radius: .5rem;
+}
+.btn-warning {
+    background-color: #f1c40f;
+}
+.btn-success {
+    background-color: #1abc9c;
+}
+.btn-danger {
+    background-color: #e74c3c;
+}
 .text-right{
     text-align: right;
 }
