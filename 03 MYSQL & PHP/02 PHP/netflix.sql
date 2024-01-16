@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-01-2024 a las 04:28:03
+-- Tiempo de generación: 13-01-2024 a las 04:33:22
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -105,7 +105,6 @@ CREATE TABLE `peliculas` (
 
 INSERT INTO `peliculas` (`peli_id`, `peli_dire_id`, `peli_nombre`, `peli_img`, `peli_genero`, `peli_fechaEstreno`, `peli_restricciones`) VALUES
 (2, 2, 'Matrix', 'https://pics.filmaffinity.com/Matrix-155050517-large.jpg', 'Ciencia Ficción', '1999-12-24', 'PG-13'),
-(3, 3, 'Titanic', NULL, 'Aventura', '1998-01-23', 'PG-16'),
 (4, 1, 'Interstellarrrrrrrrrrrrrrrrrrrrr', 'https://www.mubis.es/media/releases/13302/269957/interstellar-blu-ray-l_cover.jpg', 'ciencia ficcion', '2014-11-06', 'PG'),
 (7, 4, 'El Resplandor', NULL, 'Suspenso', '1980-05-05', 'PG-13'),
 (9, 5, 'El señor de los anillos: La comunidad del anillo', NULL, 'Ciencia ficción', '2004-11-11', 'PG'),
