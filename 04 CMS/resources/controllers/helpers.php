@@ -16,6 +16,15 @@ DELIMITADOR;
         return $msj;
     }
 
+    function display_landMensaje($msj, $tipo){
+        $msj = <<<DELIMITADOR
+            <div class="{$tipo} mt-1">
+                $msj
+            </div>
+DELIMITADOR;
+        return $msj;
+    }
+
     function query($consulta){
         global $conexion;
         return mysqli_query($conexion, $consulta);

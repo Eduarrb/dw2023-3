@@ -1,6 +1,7 @@
 <?php
     ob_start();
     session_start();
+    // session_destroy();
     // echo DIRECTORY_SEPARATOR;
     // echo "/";
     defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);

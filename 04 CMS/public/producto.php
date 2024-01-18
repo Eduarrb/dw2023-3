@@ -40,16 +40,23 @@
             <h2 class="comentarios__container__titulo">
                 Comentarios
             </h2>
-            <form action="" class="comentarios__container__form mt-2">
+            <!-- <div class="success mt-1">
+                este es un mensaje
+            </div> -->
+            <?php 
+                mostrar_msj();
+                post_guardarComentario($item['prod_id']); 
+            ?>
+            <form class="comentarios__container__form mt-2" method="post">
                 <div class="comentarios__container__form__group">
-                    <textarea name="" id="" cols="30" rows="3" placeholder="Deja tu comentario"></textarea>
+                    <textarea name="com_mensaje" cols="30" rows="3" placeholder="Deja tu comentario"></textarea>
                 </div>
                 <div class="comentarios__container__form__group">
-                    <label for="">Puntaje</label>
-                    <input type="number" name="" id="" min="1" max="5" value="1">
+                    <label for="puntaje">Puntaje</label>
+                    <input type="number" name="com_puntaje" id="puntaje" min="1" max="5" value="1">
                 </div>
                 <div class="comentarios__container__form__group text-right">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar" name="comEnviar">
                 </div>
             </form>
             <div class="comentarios__container__box">

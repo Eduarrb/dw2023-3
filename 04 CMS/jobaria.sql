@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-01-2024 a las 04:25:25
+-- Tiempo de generación: 18-01-2024 a las 04:27:05
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -22,6 +22,30 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `jobaria` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `jobaria`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+DROP TABLE IF EXISTS `comentarios`;
+CREATE TABLE `comentarios` (
+  `com_id` int(10) UNSIGNED NOT NULL,
+  `com_user_id` int(10) UNSIGNED NOT NULL,
+  `com_prod_id` int(10) UNSIGNED NOT NULL,
+  `com_mensaje` text NOT NULL,
+  `com_puntaje` int(11) NOT NULL,
+  `com_fecha` date NOT NULL,
+  `com_status` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`com_id`, `com_user_id`, `com_prod_id`, `com_mensaje`, `com_puntaje`, `com_fecha`, `com_status`) VALUES
+(1, 1, 2, 'Excelente producto, 100% recomendado y la entrega fue rapida', 4, '2024-01-17', 0);
 
 -- --------------------------------------------------------
 
@@ -47,7 +71,7 @@ INSERT INTO `productos` (`prod_id`, `prod_nombre`, `prod_descri`, `prod_precio`,
 (1, 'Mando Xbox Series X', 'Mando para la consola xbox series x y pc', 288.90, 5, 'd190dc0dfa430fdb1be858b69cdb0e11.jpg'),
 (2, 'Camara vigilancia HP', 'Camara web para interiores', 150.50, 7, 'fadb96133f02cf38451e3af2ffdde738.jpg'),
 (3, 'Smart Watch S3', 'Smart watch con giroscopio', 545.00, 10, 'a1d3b96c8d7dd4f4c1f2fea929adde96.jpg'),
-(4, 'Cámara semi profesiona Sony Alpha', 'Cámara semi profesional de 34 mega pixeles y lente de 3.5 pulagdas', 1350.80, 9, '71315fad4ee052e7e076672ef702cae4.jpg');
+(4, 'Cámara Semi Profesional Sony Alpha 7', 'Cámara semi profesional de 34 mega pixeles y lente de 3.5 pulagdas', 1350.80, 5, '4c47a3cc3d22c2c72abb5826d2aaa481.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,6 +107,14 @@ INSERT INTO `usuarios` (`user_id`, `user_nombres`, `user_apellidos`, `user_email
 --
 
 --
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`com_id`),
+  ADD KEY `fk_userId` (`com_user_id`),
+  ADD KEY `fk_prdoId` (`com_prod_id`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -99,16 +131,33 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `com_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `fk_prdoId` FOREIGN KEY (`com_prod_id`) REFERENCES `productos` (`prod_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_userId` FOREIGN KEY (`com_user_id`) REFERENCES `usuarios` (`user_id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
