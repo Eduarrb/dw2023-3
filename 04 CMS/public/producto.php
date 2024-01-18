@@ -6,11 +6,14 @@
 
     <section class="producto">
         <div class="producto__container container">
+            <?php $item = getProductoLand(); ?>
             <div class="producto__container__imgBox">
-                <img src="img/mando.jpg" alt="">
+                <img src="img/<?php echo $item['prod_img']; ?>" alt="<?php echo $item['prod_nombre']; ?>">
             </div>
             <div class="producto__container__data">
-                <h3 class="producto__container__data__titulo">Janon vista fhd 4k</h3>
+                <h3 class="producto__container__data__titulo">
+                    <?php echo $item['prod_nombre']; ?>
+                </h3>
                 <div class="producto__container__data_stars mt-2">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -19,14 +22,14 @@
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <div class="producto__container__data__precio mt-4">
-                    S/ 239.90
+                    S/ <?php echo $item['prod_precio']; ?>
                 </div>
                 <div class="producto__container__data__descri mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione id quibusdam rem voluptatem debitis, sit molestiae vero aliquam alias laborum tenetur quasi! Corrupti ipsa ipsam quae corporis qui totam atque! Qui, illo earum.
+                   <?php echo $item['prod_descri']; ?>
                 </div>
                 <form class="producto__container__data__form mt-5">
                     <label for="cantidad">Cantidad</label>
-                    <input type="number" value="1">
+                    <input type="number" value="1" min="1" max="<?php echo $item['prod_canti']; ?>">
                     <input type="submit" value="Agregar a carrito">
                 </form>
             </div>
