@@ -46,3 +46,5 @@ ALTER TABLE comentarios
     ADD CONSTRAINT fk_prdoId FOREIGN KEY (com_prod_id)
     REFERENCES productos (prod_id)
     ON DELETE RESTRICT ON UPDATE CASCADE
+
+SELECT a.com_id, CONCAT(b.user_nombres, " ", b.user_apellidos) AS usuario, c.prod_id, c.prod_nombre, a.com_mensaje, a.com_puntaje, a.com_fecha FROM comentarios a INNER JOIN usuarios b ON a.com_user_id = b.user_id INNER JOIN productos c ON a.com_prod_id = c.prod_id

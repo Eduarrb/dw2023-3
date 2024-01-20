@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_COOKIE['email'])){
+        session_destroy();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

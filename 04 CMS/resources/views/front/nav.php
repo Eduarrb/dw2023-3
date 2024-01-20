@@ -5,9 +5,19 @@
                     Mensaje de saludo
                 </div>
                 <div class="nav__welcome__container__access">
-                    <a href="#" class="nav__welcome__container__access--account">
-                        <i class="fa-solid fa-user"></i> Mi Cuenta
-                    </a>
+                    <?php 
+                        if(!isset($_SESSION['user_rol'])){
+                            ?>
+                                <a href="login.php" class="nav__welcome__container__access--account">
+                                    <i class="fa-solid fa-user"></i> Iniciar Sesión
+                                </a>
+                        <?php } else {
+                            ?>
+                                <a href="#" class="nav__welcome__container__access--account">
+                                    <i class="fa-solid fa-user"></i> <?php echo $_SESSION['user_nombres']; ?>
+                                </a>
+                        <?php }
+                    ?>
                     <select class="nav__welcome__container__access--moneda">
                         <option value="USD">USD $</option>
                         <option value="PEN">PEN S/</option>
@@ -49,6 +59,14 @@
                         <li class="nav__menu__container__right__box__item">
                             <a href="#" class="nav__menu__container__right__box__item--link">about us</a>
                         </li>
+                        <?php 
+                            if(isset($_SESSION['user_rol']) && $_SESSION['user_rol'] == 'admin'){
+                                ?>
+                                    <li class="nav__menu__container__right__box__item">
+                                        <a href="admin" class="nav__menu__container__right__box__item--link">ADMIN</a>
+                                    </li>
+                            <?php }
+                        ?>
                     </ul>
                     <a href="#" class="nav__menu__container__right__cart">
                         <div class="nav__menu__container__right__cart__box">
