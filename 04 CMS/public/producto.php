@@ -60,6 +60,7 @@
                 </div>
             </form>
             <div class="comentarios__container__box">
+
                 <div class="comentarios__container__box__item">
                     <div class="comentarios__container__box__item__imgBox">
                         <img src="img/user.png" alt="">
@@ -210,5 +211,5 @@
             </div>
         </div>
     </section>
-
+    <script type="module" src="js/comentarios.js"></script>
     <?php include(VIEW_FRONT . DS . "footer.php"); ?>
