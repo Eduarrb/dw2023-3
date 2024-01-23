@@ -53,7 +53,7 @@
                 </div>
                 <div class="comentarios__container__form__group">
                     <label for="puntaje">Puntaje</label>
-                    <input type="number" name="com_puntaje" id="puntaje" min="1" max="5" value="1">
+                    <input type="number" name="com_puntaje" id="puntaje" min="0" max="5" value="1">
                 </div>
                 <div class="comentarios__container__form__group text-right">
                     <input type="submit" value="Enviar" name="comEnviar">
@@ -61,7 +61,7 @@
             </form>
             <div class="comentarios__container__box">
 
-                <div class="comentarios__container__box__item">
+                <!-- <div class="comentarios__container__box__item">
                     <div class="comentarios__container__box__item__imgBox">
                         <img src="img/user.png" alt="">
                     </div>
@@ -207,7 +207,7 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

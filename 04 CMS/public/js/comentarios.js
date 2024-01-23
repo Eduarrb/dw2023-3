@@ -7,10 +7,66 @@ import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 // //     .catch(err => {
 // //         console.log(err)
 // //     })
+const cajaComentarios = document.querySelector('.comentarios__container__box');
+const url = location.href;
+const urlArray = url.split("=");
+const id = urlArray[1];
 
-axios.get('apiRequests/getComentarios.php?prod_id=2')
+const fechaOptions = {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+}
+
+const renderComentario = comentario => {
+    // console.log(comentario.user_img);
+    // let userImg = '';
+    // if(!comentario.user_img){
+    //     userImg = `<img src="img/user.png" alt="${comentario.usuario}">`;
+    // } else {
+    //     userImg = `<img src="img/${comentario.user_img}" alt="${comentario.usuario}">`;
+    // }
+    const fecha = new Date(comentario.com_fecha);
+    // console.log(comentario.com_puntaje);
+    let plantillaEstrellas = '';
+    
+    for(let i = 0; i < comentario.com_puntaje; i++){
+        plantillaEstrellas += '<i class="fa-solid fa-star"></i>';
+    }
+    if(comentario.com_puntaje !== 5){
+        for(let j = 0; j < 5 - comentario.com_puntaje; j++){
+            plantillaEstrellas += '<i class="fa-regular fa-star"></i>';
+        }
+    }
+    console.log(plantillaEstrellas);
+    return `
+        <div class="comentarios__container__box__item">
+            <div class="comentarios__container__box__item__imgBox">
+                <img src="img/${!comentario.user_img ? 'user.png' : comentario.user_img }" alt="${comentario.usuario}">
+            </div>
+            <div class="comentarios__container__box__item__data">
+                <div class="comentarios__container__box__item__data__top">
+                    <span>${comentario.usuario}</span>
+                    <span>${fecha.toLocaleDateString("es-ES", fechaOptions)}</span>
+                </div>
+                <p class="comentarios__container__box__item__data__descri mt-1">
+                    ${comentario.com_mensaje}
+                </p>
+                <div class="comentarios__container__box__item__data__stars mt-1">
+                    ${plantillaEstrellas}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+axios.get(`apiRequests/getComentarios.php?prod_id=${id}`)
     .then(res => {
         console.log(res.data);
+        const plantilla = res.data.map(renderComentario).join('');
+        // console.log(plantilla);
+        cajaComentarios.innerHTML = plantilla;
     })
     .catch(err => {
         console.log(err)
