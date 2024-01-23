@@ -39,7 +39,7 @@ const renderComentario = comentario => {
             plantillaEstrellas += '<i class="fa-regular fa-star"></i>';
         }
     }
-    console.log(plantillaEstrellas);
+    // console.log(plantillaEstrellas);
     return `
         <div class="comentarios__container__box__item">
             <div class="comentarios__container__box__item__imgBox">
@@ -63,11 +63,11 @@ const renderComentario = comentario => {
 
 axios.get(`apiRequests/getComentarios.php?prod_id=${id}`)
     .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         const plantilla = res.data.map(renderComentario).join('');
         // console.log(plantilla);
         cajaComentarios.innerHTML = plantilla;
     })
     .catch(err => {
-        console.log(err)
+        console.log(err);
     })
