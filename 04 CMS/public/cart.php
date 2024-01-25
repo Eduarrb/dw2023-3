@@ -6,6 +6,7 @@
 
     <section class="cart">
         <div class="cart__container container">
+            <?php mostrar_msj(); ?>
             <table class="cart__container__table">
                 <thead>
                     <tr>
@@ -18,18 +19,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php get_mostrarItemsCarrito(); ?>
-                    <tr>
-                        <td colspan="3"></td>
-                        <td style="padding: 10px 0;"><strong>Total:</strong></td>
-                        <td>S/ 1253.93</td>
-                        <td></td>
-                    </tr>
+                    <?php $validarItems = get_mostrarItemsCarrito(); ?>
                 </tbody>
             </table>
-            <form action="" class="mt-2 text-right">
-                <input type="submit" value="Checkout" class="btn btn-secondary">
-            </form>
+            <?php 
+                carritoAdd(); 
+                carritoRemove();
+                carritoDelete();
+            ?>
+            <?php 
+                if($validarItems){
+                    ?>
+                        <form action="" class="mt-2 text-right">
+                            <input type="submit" value="Checkout" class="btn btn-secondary">
+                        </form>
+                <?php }
+            ?>
         </div>
     </section>
 
