@@ -49,7 +49,6 @@
                     <input type="number" name="prod_canti" value="1" min="1" max="<?php echo $item['prod_canti']; ?>">
                     <input type="submit" value="Agregar a carrito" name="carritoAdd">
                 </form>
-
             </div>
         </div>
     </section>

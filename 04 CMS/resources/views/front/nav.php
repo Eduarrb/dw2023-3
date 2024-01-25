@@ -42,7 +42,7 @@
                 <div class="nav__menu__container__right">
                     <ul class="nav__menu__container__right__box">
                         <li class="nav__menu__container__right__box__item">
-                            <a href="#" class="nav__menu__container__right__box__item--link">home</a>
+                            <a href="./" class="nav__menu__container__right__box__item--link">home</a>
                         </li>
                         <li class="nav__menu__container__right__box__item">
                             <a href="#" class="nav__menu__container__right__box__item--link">shop</a>
@@ -68,13 +68,16 @@
                             <?php }
                         ?>
                     </ul>
-                    <a href="#" class="nav__menu__container__right__cart">
+                    <a href="cart.php" class="nav__menu__container__right__cart">
+                        <?php $fila = validarCarrito(); ?>
                         <div class="nav__menu__container__right__cart__box">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <span>2</span>
+                            <span><?php echo $fila['canti']; ?></span>
                         </div>
                         <div class="nav__menu__container__right__cart--title">My Cart</div>
-                        <div class="nav__menu__container__right__cart--price">S/59.23</div>
+                        <div class="nav__menu__container__right__cart--price">
+                            S/ <?php echo $fila['total'] ? $fila['total'] : '0.00'; ?>
+                        </div>
                     </a>
                 </div>
             </div>

@@ -64,4 +64,10 @@ DELIMITADOR;
             unset($_SESSION['mensaje']);
         }
     }
+
+    function validarSesion(){
+        if(!isset($_SESSION['user_id'])){
+            return redirect('login.php');
+        }
+    }
 ?>

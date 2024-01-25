@@ -27,6 +27,8 @@ $color-secondary-ligth: rgb(102, 102, 102);
     color: white;
     padding: 1.2rem 1.2rem .8rem 1.2rem;
     border-radius: .5rem;
+    cursor: pointer;
+    border: none;
 }
 .btn-warning {
     background-color: #f1c40f;
@@ -36,6 +38,9 @@ $color-secondary-ligth: rgb(102, 102, 102);
 }
 .btn-danger {
     background-color: #e74c3c;
+}
+.btn-secondary {
+    background-color: $color-secondary;
 }
 .text-right{
     text-align: right;
