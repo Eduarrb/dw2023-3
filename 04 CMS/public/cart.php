@@ -27,15 +27,23 @@
                 carritoRemove();
                 carritoDelete();
             ?>
-            <?php 
-                if($validarItems){
-                    ?>
-                        <form action="" class="mt-2 text-right">
-                            <input type="submit" value="Checkout" class="btn btn-secondary">
-                        </form>
-                <?php }
-            ?>
+
+            <div id="wallet_container"></div>
         </div>
     </section>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+        const mp = new MercadoPago('');
+        const bricksBuilder = mp.bricks();
+
+        mp.bricks().create("wallet", "wallet_container", {
+            initialization: {
+                preferenceId: "<?php echo $validarItems[1]; ?>",
+                redirectMode: "modal"
+            }
+        });
+
+    </script>
 
     <?php include(VIEW_FRONT . DS . "footer.php"); ?>
