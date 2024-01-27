@@ -34,7 +34,7 @@
 
     <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script>
-        const mp = new MercadoPago('');
+        const mp = new MercadoPago('TEST-aa3ab413-dd47-4db2-9bba-a25b8624b8a0');
         const bricksBuilder = mp.bricks();
 
         mp.bricks().create("wallet", "wallet_container", {

@@ -18,7 +18,7 @@
 
     function validarCarrito(){
         if(isset($_SESSION['user_id'])){
-            $query = query("SELECT COUNT(a.cart_canti) AS canti, SUM(b.prod_precio) AS total FROM carrito a INNER JOIN productos b  ON a.cart_prod_id = b.prod_id WHERE a.cart_user_id = {$_SESSION['user_id']}");
+            $query = query("SELECT COUNT(a.cart_canti) AS canti, SUM(b.prod_precio * a.cart_canti) AS total FROM carrito a INNER JOIN productos b  ON a.cart_prod_id = b.prod_id WHERE a.cart_user_id = {$_SESSION['user_id']}");
             if(contar_filas($query) >= 1){
                 return fetch_assoc($query);
             }
@@ -30,7 +30,7 @@
     require_once 'vendor/autoload.php';
     use MercadoPago\MercadoPagoConfig;
     use MercadoPago\Client\Preference\PreferenceClient;
-    MercadoPagoConfig::setAccessToken("");
+    MercadoPagoConfig::setAccessToken("TEST-7558364816343480-092211-22d8001e336cfaa7e549a06d69da72dc-160252421");
     $client = new PreferenceClient();
 
     function get_mostrarItemsCarrito(){
@@ -78,11 +78,12 @@ DELIMITADOR;
             global $client, $preference;
             $preference = $client->create([
                 "items"=> array(
-                  array(
-                    "title" => "Mi producto",
-                    "quantity" => 1,
-                    "unit_price" => 20
-                  )
+                    array(
+                        "title" => "Total a pagar",
+                        "quantity" => 1,
+                        "currency_id" => "PE",
+                        "unit_price" => $total
+                    )
                 ),
                 "back_urls" => array(
                     "success" => "http://localhost/dw2023-3/04%20CMS/public/success.php",
