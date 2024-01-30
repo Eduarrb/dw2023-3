@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-01-2024 a las 04:27:05
+-- Tiempo de generación: 30-01-2024 a las 03:57:05
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -22,6 +22,29 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `jobaria` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `jobaria`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carrito`
+--
+
+DROP TABLE IF EXISTS `carrito`;
+CREATE TABLE `carrito` (
+  `cart_id` int(10) UNSIGNED NOT NULL,
+  `cart_user_id` int(10) UNSIGNED NOT NULL,
+  `cart_prod_id` int(10) UNSIGNED NOT NULL,
+  `cart_canti` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`cart_id`, `cart_user_id`, `cart_prod_id`, `cart_canti`) VALUES
+(3, 2, 1, 2),
+(8, 1, 4, 4),
+(10, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -45,7 +68,36 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`com_id`, `com_user_id`, `com_prod_id`, `com_mensaje`, `com_puntaje`, `com_fecha`, `com_status`) VALUES
-(1, 1, 2, 'Excelente producto, 100% recomendado y la entrega fue rapida', 4, '2024-01-17', 0);
+(1, 1, 2, 'Excelente producto, 100% recomendado y la entrega fue rapida', 4, '2024-01-17', 1),
+(2, 2, 2, 'Este producto es malisimo. Deberian actualizar las marcas.', 2, '2024-01-19', 1),
+(3, 4, 2, 'El producto ok, No me gusto el color. Por lo demás si lo recomiendo', 5, '2024-01-19', 1),
+(4, 1, 4, 'Esta camara semi profesional esta genial.', 5, '2024-01-19', 1),
+(5, 3, 2, 'No vale pena, hay mejores productos.', 3, '2024-01-22', 1),
+(6, 2, 4, 'Malisimo', 1, '2024-01-22', 1),
+(7, 1, 1, 'Solo 1 punto', 1, '2024-01-22', 1),
+(8, 1, 3, '', 1, '2024-01-22', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pedidos`
+--
+
+DROP TABLE IF EXISTS `pedidos`;
+CREATE TABLE `pedidos` (
+  `ped_pref_id` text NOT NULL,
+  `ped_pay_id` int(11) NOT NULL,
+  `ped_user_id` int(10) UNSIGNED NOT NULL,
+  `ped_status` varchar(25) NOT NULL,
+  `ped_fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`ped_pref_id`, `ped_pay_id`, `ped_user_id`, `ped_status`, `ped_fecha`) VALUES
+('160252421-f1b640cb-52f4-4e62-81d5-941944ac65c3', 1320899283, 1, 'approved', '2024-01-26 21:57:20');
 
 -- --------------------------------------------------------
 
@@ -97,14 +149,22 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`user_id`, `user_nombres`, `user_apellidos`, `user_email`, `user_img`, `user_pass`, `user_token`, `user_status`, `user_rol`) VALUES
-(1, 'Eduardo', 'Arroyo', 'eduardo@gmail.com', NULL, '$2y$12$jV/0fq.GOx2v38Mni.uAi.KgyxoGCySFvAwDLVGelScQK86yMbqnq', '', 1, 'admin'),
+(1, 'Eduardo', 'Arroyo', 'eduardo@gmail.com', 'edu.jpg', '$2y$12$jV/0fq.GOx2v38Mni.uAi.KgyxoGCySFvAwDLVGelScQK86yMbqnq', '', 1, 'admin'),
 (2, 'John', 'Smith', 'john@gmail.com', NULL, '$2y$12$Ek.Imj5lAnzIjM3tM0L85eqeIB8OpPIwEh282GIJE.ofP6t/GmqZq', '', 1, 'suscriptor'),
-(3, 'Sofia', 'Salas', 'sofia@gmail.com', NULL, '$2y$12$yTuwXba4xJltBsn9WHAFH.HSNYOwzIoG7GVV5U.B/lQRWu26DDExy', 'd41d8cd98f00b204e9800998ecf8427e', 0, 'suscriptor'),
+(3, 'Sofia', 'Salas', 'sofia@gmail.com', NULL, '$2y$12$yTuwXba4xJltBsn9WHAFH.HSNYOwzIoG7GVV5U.B/lQRWu26DDExy', NULL, 1, 'suscriptor'),
 (4, 'Carla', 'Rosales', 'carla@gmail.com', NULL, '$2y$12$YDEWkCQvtT0Bdmk3uVQWGOfpzJMRUUdb5S.obzPuYUQMJi728ybtK', '', 1, 'suscriptor');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD PRIMARY KEY (`cart_id`),
+  ADD KEY `fk_userCartId` (`cart_user_id`),
+  ADD KEY `fk_prodCartId` (`cart_prod_id`);
 
 --
 -- Indices de la tabla `comentarios`
@@ -131,10 +191,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  MODIFY `cart_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `com_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `com_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -151,6 +217,13 @@ ALTER TABLE `usuarios`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD CONSTRAINT `fk_prodCartId` FOREIGN KEY (`cart_prod_id`) REFERENCES `productos` (`prod_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_userCartId` FOREIGN KEY (`cart_user_id`) REFERENCES `usuarios` (`user_id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `comentarios`
