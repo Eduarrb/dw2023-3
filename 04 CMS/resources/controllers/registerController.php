@@ -48,7 +48,7 @@
     }
 
     function registro_usuario($nombres, $apellidos, $email, $pass){
-        $user_token = md5($user_email);
+        $user_token = md5($email);
         $user_pass = password_hash($pass, PASSWORD_BCRYPT, array('cost' => 12));
         query("INSERT INTO usuarios (user_nombres, user_apellidos, user_email, user_pass, user_token) VALUES ('{$nombres}', '{$apellidos}', '{$email}', '{$user_pass}', '{$user_token}')");
         $mensaje = "Por favor activa tu cuenta mediante este <a href='http://localhost/dw2023-3/04%20CMS/public/activate.php?email={$email}&token={$user_token}' target='_blank'>LINK</a>";
